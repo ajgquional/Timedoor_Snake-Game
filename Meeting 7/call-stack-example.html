@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Call Stack Example</title>
+  </head>
+  <body>
+    <script>
+        function baz(){
+            document.write("Hello from Sir Adrian!");
+        }
+
+        function bar(){
+            baz();
+        }
+
+        function foo(){
+            bar();
+        }
+        
+        foo();
+    </script>
+
+  </body>
+</html>
