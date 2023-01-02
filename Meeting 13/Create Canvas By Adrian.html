@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas id="myCanvas" width="640" height="380" style="background-color : pink"></canvas>
+</body>
+<script>
+    var canvas= document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Welcome Text
+    ctx.fillStyle = "red";
+    ctx.textAlign = "center";
+    ctx.font = "40px cursive";
+    ctx.fillText("Welcome", 325, 60);
+    
+    // CHALLENGE
+    ctx.font = "20px serif";
+    ctx.strokeText("This is My Canvas", 325, 100);
+
+    // rectangle
+    ctx.fillStyle="red";
+    ctx.fillRect(200, 325, 250, 50);
+    //ctx.clearRect(230, 235, 230, 30); // clearRect NOT WORKING
+
+    // make a triangle
+    ctx.fillStyle="red";
+    ctx.beginPath();
+    ctx.moveTo(325, 230);
+    ctx.lineTo(300, 270);
+    ctx.lineTo(350, 270);
+    ctx.closePath();
+    ctx.fill();
+
+    // make a circle
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = "20";
+    ctx.beginPath();
+    ctx.arc(130, 150, 40, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    // make another circle
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = "20";
+    ctx.beginPath();
+    ctx.arc(520, 150, 40, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+</script>
+</html>
